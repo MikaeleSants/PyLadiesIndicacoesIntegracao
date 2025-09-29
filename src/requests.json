@@ -1,0 +1,119 @@
+{
+  "info": {
+    "name": "Profissionais API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Criar Profissional",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"nome\": \"Mika\",\n  \"area\": \"Desenvolvimento\",\n  \"email\": \"santsmikaele@gmail.com\",\n  \"contato\": \"85992002453\",\n  \"camposEspecificos\": {\n    \"senioridade\": \"Junior\",\n    \"localidade\": \"Remoto\",\n    \"disponibilidade\": \"Part-time\"\n  }\n}"
+        },
+        "url": {
+          "raw": "http://localhost:8080/profissionais",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "8080",
+          "path": ["profissionais"]
+        }
+      }
+    },
+    {
+      "name": "Atualizar Profissional",
+      "request": {
+        "method": "PUT",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"nome\": \"Jane\",\n  \"area\": \"Desenvolvimento\",\n  \"email\": \"santsmikaele@gmail.com\",\n  \"contato\": \"85992002453\",\n  \"camposEspecificos\": {\n    \"senioridade\": \"Pleno\",\n    \"localidade\": \"Remoto\",\n    \"disponibilidade\": \"Part-time\"\n  }\n}"
+        },
+        "url": {
+          "raw": "http://localhost:8080/profissionais/68d5dc23969d27652c334567",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "8080",
+          "path": ["profissionais", "68d5dc23969d27652c334567"]
+        }
+      }
+    },
+    {
+      "name": "Buscar por Área",
+      "request": {
+        "method": "GET",
+        "url": {
+          "raw": "http://localhost:8080/profissionais/area/Desenvolvimento",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "8080",
+          "path": ["profissionais", "area", "Desenvolvimento"]
+        }
+      }
+    },
+    {
+      "name": "Listar Todos os Profissionais",
+      "request": {
+        "method": "GET",
+        "url": {
+          "raw": "http://localhost:8080/profissionais",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "8080",
+          "path": ["profissionais"]
+        }
+      }
+    },
+    {
+      "name": "Buscar por ID",
+      "request": {
+        "method": "GET",
+        "url": {
+          "raw": "http://localhost:8080/profissionais/68d5dc23969d27652c334567",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "8080",
+          "path": ["profissionais", "68d5dc23969d27652c334567"]
+        }
+      }
+    },
+    {
+      "name": "Buscar por Área (vazio)",
+      "request": {
+        "method": "GET",
+        "url": {
+          "raw": "http://localhost:8080/profissionais/area/",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "8080",
+          "path": ["profissionais", "area", ""]
+        }
+      }
+    },
+    {
+      "name": "Deletar Profissional",
+      "request": {
+        "method": "DELETE",
+        "url": {
+          "raw": "http://localhost:8080/profissionais/68d5dc23969d27652c334567",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "8080",
+          "path": ["profissionais", "68d5dc23969d27652c334567"]
+        }
+      }
+    }
+  ]
+}
