@@ -1,0 +1,153 @@
+###
+#CT01: Cadastro válido
+###
+POST http://localhost:8080/profissionais
+Content-Type: application/json
+
+{
+  "nome": "Mika",
+  "area": "Desenvolvimento",
+  "email": "santsmikaele@gmail.com",
+  "contato": "85992002453"
+}
+###
+#CT02: Cadastro com campos extras
+###
+POST http://localhost:8080/profissionais
+Content-Type: application/json
+
+{
+  "area": "Desenvolvimento",
+  "email": "santsmikaelegmail.com",
+  "contato": "85992002453",
+  "camposEspecificos": {
+    "senioridade": "Junior",
+    "localidade": "Remoto",
+    "disponibilidade": "Part-time"
+  }
+}
+###
+# CT03:	Listagem padrão
+###
+GET http://localhost:8080/profissionais
+###
+#CT7:	Edição completa
+@id = 68d5dc23969d27652c334567
+###
+PUT http://localhost:8080/profissionais/{{id}}
+Content-Type: application/json
+
+{
+  "nome": "Jane",
+  "area": "Desenvolvimento",
+  "email": "santsmikaele@gmail.com",
+  "contato": "85992002453",
+  "camposEspecificos": {
+    "senioridade": "Pleno",
+    "localidade": "Remoto",
+    "disponibilidade": "Part-time"
+  }
+}
+###
+#CT8:	Edição parcial
+###
+PUT http://localhost:8080/profissionais/{{id}}
+Content-Type: application/json
+
+{
+  "nome": "Jane",
+  "area": "Desenvolvimento",
+  "contato": "85992002453",
+  "camposEspecificos": {
+    "senioridade": "Pleno",
+    "localidade": "Remoto",
+    "disponibilidade": "Part-time"
+  }
+}
+###
+#CT04:	Área existente
+@area = Desenvolvimento
+###
+GET http://localhost:8080/profissionais/area/{{area}}
+
+###
+#CT05:	ID Válido
+###
+GET http://localhost:8080/profissionais/{{id}}
+
+###
+#CT6:	Áreas distintas
+###
+GET http://localhost:8080/profissionais/area/
+
+###
+#CT7:	Exclusão válida
+###
+DELETE http://localhost:8080/profissionais/{{id}}
+
+Recolher
+casos-de-testes.http
+2 KB
+Tipo de arquivo em anexo: document
+CASOS-DE-TESTE.MD
+2.22 KB
+POST http://localhost:8080/profissionais
+Content-Type: application/json
+
+{
+  "nome": "Mika",
+  "area": "Desenvolvimento",
+  "email": "santsmikaele@gmail.com",
+  "contato": "85992002453",
+  "camposEspecificos": {
+    "senioridade": "Junior",
+    "localidade": "Remoto",
+    "disponibilidade": "Part-time"
+  }
+}
+###
+
+@id = 68d5dc23969d27652c334567
+###
+PUT http://localhost:8080/profissionais/{{id}}
+Content-Type: application/json
+
+{
+  "nome": "Jane",
+  "area": "Desenvolvimento",
+  "email": "santsmikaele@gmail.com",
+  "contato": "85992002453",
+  "camposEspecificos": {
+    "senioridade": "Pleno",
+    "localidade": "Remoto",
+    "disponibilidade": "Part-time"
+  }
+}
+###
+@area = Desenvolvimento
+###
+GET http://localhost:8080/profissionais/area/{{area}}
+
+<> 2025-09-25T215027.200.json
+<> 2025-09-25T214924.200.json
+
+###
+GET http://localhost:8080/profissionais
+
+<> 2025-09-25T221109.200.json
+<> 2025-09-25T221001.200.json
+<> 2025-09-25T220248.200.json
+<> 2025-09-25T214948.200.json
+<> 2025-09-25T214751.200.json
+<> 2025-09-25T014753.200.json
+###
+
+###
+GET http://localhost:8080/profissionais/{{id}}
+
+<> 2025-09-25T221136.200.json
+###
+GET http://localhost:8080/profissionais/area/
+
+###
+DELETE http://localhost:8080/profissionais/{{id}}
