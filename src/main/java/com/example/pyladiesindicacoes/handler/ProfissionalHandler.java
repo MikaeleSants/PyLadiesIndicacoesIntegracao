@@ -2,7 +2,7 @@ package com.example.pyladiesindicacoes.handler;
 
 import com.example.pyladiesindicacoes.repository.ProfissionalRepository;
 import com.example.pyladiesindicacoes.model.Profissional;
-import com.example.pyladiesindicacoes.services.EmailService;
+import com.example.pyladiesindicacoes.service.EmailService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.http.MediaType;
