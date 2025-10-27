@@ -1,4 +1,4 @@
-package java.com.example.pyladiesindicacoes.services;
+package com.example.pyladiesindicacoes.services;
 
 import com.example.pyladiesindicacoes.model.Profissional;
 import com.example.pyladiesindicacoes.service.EmailService;
@@ -7,7 +7,9 @@ import org.junit.jupiter.api.Test;
 import org.mockito.ArgumentCaptor;
 import org.springframework.mail.SimpleMailMessage;
 import org.springframework.mail.javamail.JavaMailSender;
+
 import java.util.Map;
+
 import static org.junit.jupiter.api.Assertions.*;
 import static org.mockito.Mockito.*;
 
@@ -40,8 +42,7 @@ class EmailServiceTest {
 
     @Test
     void testEnviarEmailCadastro() throws Exception {
-
-        doReturn("Olá {{nome}}, bem-vinda!").when(emailService).carregarTemplate("templates/emailCadastro.txt");
+        doReturn("Olá {{nome}}, bem-vinda!").when(emailService).carregarTemplate("template/emailCadastro.txt");
 
         emailService.enviarEmailCadastro(profissional).block();
 
