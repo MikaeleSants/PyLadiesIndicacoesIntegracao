@@ -1,5 +1,5 @@
 FROM gradle:8.2.0-jdk17 AS build
-COPY --chown=gradle:gradle src /home/gradle/project
+COPY --chown=gradle:gradle . /home/gradle/project
 WORKDIR /home/gradle/project
 RUN gradle build --no-daemon
 
