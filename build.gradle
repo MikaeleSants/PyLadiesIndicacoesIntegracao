@@ -40,6 +40,10 @@ bootJar {
     mainClass = 'com.example.pyladiesindicacoes.PyLadiesIndicacoesApplication'
 }
 
+jar {
+    enabled = false
+}
+
 tasks.named('test') {
     useJUnitPlatform()
 }
