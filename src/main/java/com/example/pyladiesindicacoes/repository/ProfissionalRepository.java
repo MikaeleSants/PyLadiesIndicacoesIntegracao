@@ -6,4 +6,7 @@ import reactor.core.publisher.Flux;
 
 public interface ProfissionalRepository extends ReactiveMongoRepository <Profissional, String>{
     Flux<Profissional> findByArea(String area);
+
+    Flux<Profissional> findByAreaContainingIgnoreCase(String area);
+    Flux<Profissional> findByNomeContainingIgnoreCase(String nome);
 }

@@ -1,4 +1,4 @@
-package com.example.pyladiesindicacoes;
+package java.com.example.pyladiesindicacoes;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

@@ -15,6 +15,7 @@ public class ProfissionalRouter {
         return route()
                 .GET("/profissionais", handler::listar)
                 .GET("/profissionais/area/{area}", handler::buscarPorArea)
+                .GET("/profissionais/nome/{nome}", handler::buscarPorNome)
                 .GET("/profissionais/{id}", handler::buscarPorId)
                 .GET("/profissionais/area/", handler::listarAreas)
                 .POST("/profissionais", handler::salvar)
