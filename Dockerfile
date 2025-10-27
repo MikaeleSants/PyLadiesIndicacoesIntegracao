@@ -1,9 +1,12 @@
-FROM gradle:8.2.0-jdk17 AS build
-COPY --chown=gradle:gradle . /home/gradle/project
-WORKDIR /home/gradle/project
-RUN ./gradlew build --no-daemon
+# Etapa de build
+FROM gradle:8.5-jdk21 AS build
+WORKDIR /home/gradle/app
+COPY . .
+RUN ./gradlew clean build -x test
 
-FROM eclipse-temurin:17-jre
-COPY --from=build /home/gradle/project/build/libs/*.jar app.jar
+# Etapa final (imagem leve)
+FROM eclipse-temurin:21-jre
+WORKDIR /app
+COPY --from=build /home/gradle/app/build/libs/*.jar /app/
 EXPOSE 8080
-ENTRYPOINT ["java", "-jar", "app.jar"]
+ENTRYPOINT ["sh", "-c", "java -jar /app/*.jar --server.port=${PORT:-8080}"]
