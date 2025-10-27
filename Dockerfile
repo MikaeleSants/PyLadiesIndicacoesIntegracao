@@ -7,6 +7,6 @@ RUN ./gradlew clean build -x test
 # Etapa final (imagem leve)
 FROM eclipse-temurin:21-jre
 WORKDIR /app
-COPY build/libs/*-SNAPSHOT.jar app.jar
+COPY --from=build /home/gradle/app/build/libs/*.jar /app/
 EXPOSE 8080
 ENTRYPOINT ["sh", "-c", "java -jar /app/*.jar --server.port=${PORT:-8080}"]
