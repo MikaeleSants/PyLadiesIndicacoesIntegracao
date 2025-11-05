@@ -4,7 +4,9 @@ Alguém te indicou e seu contato foi cadastrado com sucesso no banco de indicaç
 
 Essa é uma iniciativa da comunidade PyLadies Fortaleza, formada por mulheres que atuam na área de tecnologia. Nosso objetivo é promover a integração de mais mulheres na área tech, incentivar conexões profissionais e facilitar o networking entre elas.
 
-Se você quiser saber mais sobre a iniciativa, em breve teremos um site com todas as informações. Por enquanto, você pode acompanhar e entrar em contato com a gente pelo Instagram: [@PyLadiesFortaleza](https://instagram.com/pyladiesfortaleza)
+Se você quiser saber mais sobre a iniciativa, em breve teremos um site com todas as informações. Por enquanto, você pode acompanhar e entrar em contato com a gente pelo Instagram: [@PyLadiesFortaleza](https://instagram.com/pyladiesfortaleza).
+
+Acesse o site e conheça a plataforma:  https://mikaelesants.github.io/PyLadiesIndicacoesWeb/
 
 Caso deseje ser removida da lista, é só nos mandar uma mensagem por lá.
 
