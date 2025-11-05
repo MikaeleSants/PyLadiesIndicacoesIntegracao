@@ -67,7 +67,8 @@ A arquitetura planejada é **multicamadas**, dividida entre frontend, backend, b
 ## 1. Base URL
 
 ```
-http://localhost:8080/profissionais
+local: http://localhost:8080/profissionais
+prod: https://mikaelesants.github.io/PyLadiesIndicacoesWeb/
 ```
 
 ## 2. Endpoints
